@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/movie/css/myStyle.css">
+    <link rel="stylesheet" href="static/movie/css/style.css">
+
+    <title>Moovr</title>
+</head>
+
+<body>
+    <header class="container-fluid" id="header">
+        <p id="jumbotron"><b>هر روز،<br />
+                یک فیلم خوب،<br />
+                کنار هم، میبینیم...</b></p>
+        <button id="button">عضویت</button>
+        <div id="logo" class="headericon"><a href="#"><img id="logoimage" src="static/movie/Images/Logo.svg"> </a></div>
+        <div id="socialicons">
+            <div id="twitter" class="headericon"><a href="http://www.twitter.com/mooverir"><img src="static/movie/Images/Twitter.svg"
+                        id="twitterimage"></a></div>
+            <div id="telegram" class="headericon"><a href="http://t.me/moovr"><img src="{% static 'movie/images/Telegram.svg' %}"
+                        id="telegramimage"></a>
+            </div>
+        </div>
+        <div id="profile" class="headericon"><a href="#"><img src="static/movie/Images/Profile.svg" id="profileimage"></a></div>
+        <div id="instagram" class="headericon"><a href="http://www.instagram.com/moovr_ir"><img
+                    src="static/movie/Images/Instagram.svg" id="instagramimage"></a>
+        </div>
+
+    </header>
+    <div id="content">
+        <img src="static/movie/Images/line.svg" id="line">
+        <div id="day">
+            <h4 style="text-align: center; padding-top: 15px; font-family: Arial, Helvetica, sans-serif;"><b>{{ FilmOfTheDay.Title }}</b>
+            </h4>
+            <div id="lefttitle" class="title">Film of the Day</div>
+            <div id="midtitle" class="title">{{ FilmOfTheDay.Year }}</div>
+            <div id="righttitle" class="title">{{ FilmOfTheDay.Director }}</div>
+
+
+        </div>
+        <div id="dayfilmparent">
+            <a href="{% url 'movie:detail' FilmOfTheDay.id %}"><img src="{{ FilmOfTheDay.image.url }}" id="dayfilm"></a>
+            <div id="daycopyright">
+                <p id="q">{{ FilmOfTheDay.Synopsis }}</p>
+            </div>
+
+
+        </div>
+        <div class="filmbox">
+            <div class="copyright">
+                <p>فیلمی جنایی ساختهٔ برادران کوئن و محصول سال ۱۹۹۶ و یک کمدی سیاه است. فارگو در شصت و نهمین جشنواره
+                    اسکار نامزد دریافت هفت جایزه شد و توانست دو جایزه اسکار بهترین فیلم‌نامه غیراقتباسی و جایزه اسکار
+                    بهترین بازیگر نقش اول زن را به‌دست‌آورد. همچنین فیلم، برنده جایزه بفتا،</p>
+                <img src="static/movie/Images/HD.svg" style="width: 30px; position: absolute; right: 35px; bottom: 15px;">
+                <p id="bishtar">
+                    بیشتر</p>
+            </div>
+            <div class="filmphotoparent">
+                <a href="#"><img src="static/movie/Images/benjamin.jpg" class="filmphoto">
+                    <div id="donwloadparent"><img src="static/movie/Images/Donwload.svg" id="donwlaod"></div>
+                    <div id="title" class="filmtitle"><b>GOOD FELLAS</b></div>
+                    <div id="director" class="director">Martin Scorsese, 1991</div>
+                </a>
+            </div>
+        </div>
+        {% for movie in movies %}
+        <div class="filmbox">
+            <div class="copyright">
+                <p>{{ movie.Synopsis }}</p>
+                <img src="static/movie/Images/HD.svg" style="width: 30px; position: absolute; right: 35px; bottom: 15px;">
+                <p id="bishtar">
+                    <بیشتر< /p>
+            </div>
+            <div class="filmphotoparent">
+                <a href="{% url 'movie:detail' movie.id %}"><img src="{{ movie.image.url }}" class="filmphoto" style="width: 750px; height: 280px;"></a>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div id="footer">
+            <a href="#">
+                <p id="footerp"
+                    style="text-align: center; float: left; margin-left: 30px; margin-top: 30px; font-size: 17px;">moovr
+                </p>
+            </a>
+            <a href="http://www.twitter.com/mooverir"> <img src="static/movie/Images/Twitter-black.svg" alt="Image"
+                    id="twitter-black"></a>
+            <a href="http://www.instagram.com/moovr_ir"><img src="static/movie/Images/Instagram-black.svg" alt="Image"
+                    id="instagram-black"></a>
+            <a href="http://www.t.me/moovr"> <img src="static/movie/Images/Telegram-black.svg" alt="Image" id="telegram-black">
+            </a>
+            <a href="#"><img src="static/movie/Images/Top.svg" id="top"></a>
+        </div>
+
+
+    </div>
+
+    <!-- ---------------------------------------- -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

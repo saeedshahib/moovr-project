@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.506" height="38.263" viewBox="0 0 42.506 38.263">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3f3f3;
+      }
+
+      .cls-2 {
+        filter: url(#Path_37);
+      }
+    </style>
+    <filter id="Path_37" x="0" y="0" width="42.506" height="38.263" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_14" data-name="Group 14" transform="translate(9 6)">
+    <g id="Telegram__software_-Logo.wine" data-name="Telegram_(software)-Logo.wine">
+      <g class="cls-2" transform="matrix(1, 0, 0, 1, -9, -6)">
+        <path id="Path_37-2" data-name="Path 37" class="cls-1" d="M43.127,78.932l14.6-6.014c1.441-.626,6.328-2.631,6.328-2.631s2.255-.877,2.067,1.253c-.063.877-.564,3.947-1.065,7.267l-1.566,9.836s-.125,1.441-1.19,1.692-2.819-.877-3.132-1.128c-.251-.188-4.7-3.007-6.328-4.385a1.187,1.187,0,0,1,.063-2c2.255-2.067,4.949-4.636,6.578-6.265.752-.752,1.5-2.506-1.629-.376l-8.834,5.952a3.681,3.681,0,0,1-2.882.063c-1.879-.564-4.072-1.316-4.072-1.316s-1.5-.94,1.065-1.942Z" transform="translate(-32.62 -64.11)"/>
+      </g>
+    </g>
+  </g>
+</svg>

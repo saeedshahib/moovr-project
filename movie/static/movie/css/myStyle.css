@@ -1,0 +1,273 @@
+body {
+  /* width: 100vw; */
+  background-color: #eaeaea;
+  font-size: 13px;
+  
+}
+
+#header {
+  position: fixed;
+  background: url(../Images/PhantomThread.jpg) center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  /* position: relative; */
+  bottom: 0;
+}
+#logo {
+  position: fixed;
+  /* position: absolute; */
+  float: left;
+  left: 15px;
+  margin-top: 10px;
+}
+
+#twitter {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 12px;
+}
+#instagram {
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  top: 10px;
+}
+#telegram {
+  position: absolute;
+  left: 50%;
+  margin-left: 45px;
+  top: 12px;
+}
+#profile {
+  /* position: absolute; */
+  float: right;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+#content {
+  /* padding-top: 20px; */
+  margin-top: -20px;
+  position: relative;
+  background-color: #e2e2e2;
+  /* width: 100vw; */
+  height: max-content;
+}
+#day {
+  z-index: 1000;
+  position: absolute;
+  background-color: #e2e2e2;
+  width: 1250px;
+  height: 86px;
+  left: 50%;
+  margin-left: -625px;
+  /* margin-top: 636px; */
+  /* top: 100vh; */
+  margin-top: -86px;
+  padding-top: 5px;
+}
+#detail {
+  position: relative;
+}
+
+.detail {
+  /* position: absolute; */
+  float: left;
+}
+#right {
+  float: right;
+  margin-right: 72px;
+}
+#mid {
+  position: absolute;
+  left: 600px;
+  text-decoration: none;
+}
+
+.title {
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#righttitle {
+  float: right;
+  margin-right: 72px;
+}
+#lefttitle {
+  margin-left: 72px;
+}
+#midtitle {
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+}
+#line {
+  /* background-color: aqua; */
+  /* height: 100px; */
+  z-index: 10000000;
+  position: absolute;
+  top: -0px;
+  width: 1110px;
+  left: 50%;
+  margin-left: -555px;
+}
+.filmbox {
+  position: relative;
+  margin: 10px auto;
+  background-color: #ffffff;
+  width: 1110px;
+  height: 280px;
+  top: 10px;
+}
+.filmphotoparent {
+  float: right;
+  position: relative;
+}
+.copyright {
+  position: relative;
+  padding: 30px;
+  padding-bottom: 0;
+  padding-bottom: 50px;
+  float: left;
+  width: 360px;
+  height: 280px;
+  /* align-self: flex-end; */
+}
+p {
+  text-align: right;
+}
+#jumbotron {
+  text-align: right;
+  color: #eaeaea;
+  position: absolute;
+  font-size: 30px;
+  top: 35vh;
+  right: 13%;
+}
+#button {
+  background-color: #04007a;
+  color: #eaeaea;
+  width: 160px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  position: absolute;
+  top: 57vh;
+  right: 13%;
+}
+#bishtar {
+  position: absolute;
+  float: left;
+  left: 40px;
+  bottom: 5px;
+  color: #cea363;
+  display: none;
+}
+#footer {
+  position: relative;
+  margin-top: 40px;
+  height: 86px;
+  bottom: 0;
+  background-color: #ffffff;
+}
+#instagramimage :hover {
+  color: #04007a;
+}
+#dayfilmparent {
+  position: relative;
+  width: 1110px;
+  height: 625px;
+  margin: 0px auto;
+  margin-top: 100vh;
+  top: 20px;
+  margin-bottom: 20px;
+}
+#dayfilm {
+  /* position: absolute; */
+  width: 1110px;
+  height: 625px;
+}
+#daycopyright {
+  /* background-color: aquamarine; */
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  width: 1110px;
+
+  padding: 50px;
+}
+#q {
+  text-align: center;
+}
+#title {
+  color: #ffffff;
+  font-size: 30px;
+  /* height: 80px;
+  width: 750px; */
+  text-align: right;
+  /* background-color: aqua; */
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px 30px;
+  /* letter-spacing: 1px; */
+}
+#director {
+  color: #ffffff;
+  font-size: 15px;
+  height: 40px;
+  width: 750px;
+  text-align: right;
+  /* background-color: aqua; */
+  position: absolute;
+  right: 0;
+  top: 60px;
+  padding-right: 30px;
+  letter-spacing: 1px;
+}
+#donwloadparent {
+  position: absolute;
+  /* background-color: aquamarine; */
+  z-index: 5;
+  top: 50%;
+  margin-top: -23px;
+  left: 50%;
+  margin-left: -35px;
+}
+
+#twitter-black {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -100px;
+  /* top: 12px; */
+}
+#instagram-black {
+  position: absolute;
+  left: 50%;
+  margin-left: -12.25px;
+  top: 23px;
+}
+#telegram-black {
+  position: absolute;
+  left: 50%;
+  margin-left: 70px;
+  top: 25px;
+}
+#top {
+  float: right;
+  margin-right: 40px;
+  margin-top: 40px;
+  width: 20px;
+}
+a {
+  color: black;
+}
+.filmtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.director {
+  font-family: Arial, Helvetica, sans-serif;
+}

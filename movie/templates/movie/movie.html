@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'movie/style.css' %}">
+    <link rel="stylesheet" href="{% static 'movie/css/style.css' %}">
+
+    <title>Her 2013</title>
+</head>
+
+<body>
+    <header style="background: url(../../static/movie/Images/PhantomThread.jpg);" class="container-fluid" id="header">
+
+        <div id="logo" class="headericon"><a href="#"><img id="logoimage" src="{% static 'movie/Images/Logo.svg' %}"> </a></div>
+        <div id="socialicons">
+            <div id="twitter" class="headericon"><a href="http://www.twitter.com/mooverir"><img
+                        src="{% static 'movie/Images/Twitter.svg' %}" id="twitterimage"></a></div>
+            <div id="telegram" class="headericon"><a href="http://t.me/moovr"><img src="{% static 'movie/Images/Telegram.svg' %}"
+                        id="telegramimage"></a>
+            </div>
+        </div>
+        <div id="profile" class="headericon"><a href="#"><img src="{% static 'movie/Images/Profile.svg' %}" id="profileimage"></a></div>
+        <div id="instagram" class="headericon"><a href="http://www.instagram.com/moovr_ir"><img
+                    src="{% static 'movie/Images/Instagram.svg' %}" id="instagramimage"></a>
+        </div>
+        <div id="opacity">
+            <div id="info">
+                <h1>{{ movie.Title }}</h1>
+                <h3>Directed by <b>{{ movie.Director }}</b></h3>
+                <h3>{{ movie.Country }}, {{ movie.Year }}</h3>
+                <h3 class="genre">{{ movie.Jenre }}</h3>
+                <div id="time">
+                    <img src="{% static 'movie/Images/time.svg' %}" id="timeicon">
+                    <p style="float: left;">{{ movie.Time }}</p>
+                    <img src="{% static 'movie/Images/speaker.svg' %}" id="speakericon">
+                    <p>{{ movie.Language }}</p>
+                </div>
+
+            </div>
+            <div id="summary">
+                <p id="q">{{ movie.Synopsis }}</p>
+            </div>
+        </div>
+
+
+    </header>
+    <div class="container-fluid" id="main">
+        <div id="castparent">
+            <p id="cast"><b>{{ movie.Cast|safe }}</b></p>
+        </div>
+        <div class="download" id="firstdownload">
+            <a href="#">
+                <div class="donwloadbutton">دانلود <span><img src="{% static 'movie/Images/donwloadarrow.svg' %}"
+                            id="downloadarrow"></span>
+                </div>
+            </a>
+            <div id="quality">BluRay 1080P</div>
+            <div id="quantity">GB 2.5</div>
+        </div>
+        <div class="download">
+            <a href="#">
+                <div class="donwloadbutton">دانلود <span><img src="{% static 'movie/Images/donwloadarrow.svg' %}"
+                            id="downloadarrow"></span>
+                </div>
+            </a>
+            <div id="quality">BluRay 720P</div>
+            <div id="quantity">GB 1.3</div>
+        </div>
+        <div class="download">
+            <a href="#">
+                <div class="donwloadbutton" id="subtitle">دانلود <span><img src="{% static 'movie/Images/donwloadarrow.svg' %}"
+                            id="downloadarrow"></span>
+                </div>
+            </a>
+            <div id="quality">Subtitle</div>
+            <div id="quantity">SRT</div>
+        </div>
+    </div>
+
+
+
+    <form action="/html/tags/html_form_tag_action.cfm" method="post">
+        <div>
+            <textarea name="comments" id="comments" placeholder="نظر شما درباره این فیلم ؟"
+                style="padding: 10px; padding-right: 2.5%;  padding-left: 2.5%;"></textarea>
+
+
+        </div>
+        <input type="submit" value="ارسال" id="submit">
+        <div id="spoil">
+            <a href="#"> <img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;margin-right: 20px;">
+            </a>
+
+            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
+            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
+            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
+            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
+
+
+    </form>
+
+    </div>
+
+
+    <div id="commentparent">
+        <div class="commenting" id="firstcommenting">
+            <div class="name"></div>
+            <p style="float: right; padding: 10px; padding-right: 5%;">نام کاربر</p>
+            <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/3Star.svg' %}"></div>
+            <p style="float: right; padding: 10px;margin-right: 5px;">تاریخ</p>
+            <!-- <div class="commentcontent">متن
+                ddddddddddddddddddddddasdsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddکامنت
+            </div> -->
+            <p class="commentp"
+                style="padding-top: 50px; text-align: right;margin-left: 5%; margin-right: 5%; position: absolute; width: 90%;  ">
+                متن کامنت
+            </p>
+            <div class="replycomment">
+                <img src="{% static 'movie/Images/Reply.svg' %}">
+                <p style="float: right; font-size: 10px;margin-left: 2px;">11</p>
+            </div>
+            <div class="likecomment">
+
+
+                <img src="{% static 'movie/Images/Like.svg' %}">
+                <p style="float: right; font-size: 10px;margin-left: 2px;">11</p>
+            </div>
+        </div>
+        <div class="commenting">
+            <div class="name"></div>
+            <p style="float: right; padding: 10px; padding-right: 5%;">نام کاربر</p>
+            <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/3Star.svg' %}"></div>
+            <p style="float: right; padding: 10px;margin-right: 5px;">تاریخ</p>
+            <!-- <div class="commentcontent">متن
+                ddddddddddddddddddddddasdsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddکامنت
+            </div> -->
+            <p class="commentp"
+                style="padding-top: 50px; text-align: right;margin-left: 5%; margin-right: 5%; position: absolute; width: 90%;">
+                متن کامنت
+            </p>
+            <div class="replycomment">
+                <img src="{% static 'movie/Images/Reply.svg' %}">
+                <p style="float: right; font-size: 10px;margin-left: 2px;">11</p>
+            </div>
+            <div class="likecomment">
+
+
+                <img src="{% static 'movie/Images/Like.svg' %}">
+                <p style="float: right; font-size: 10px;margin-left: 2px;">11</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div id="footer">
+        <a href="#">
+            <p id="footerp"
+                style="text-align: center; float: left; margin-left: 30px; margin-top: 30px; font-size: 17px; color: black;">
+                moovr
+            </p>
+        </a>
+        <a href="http://www.twitter.com/mooverir"> <img src="{% static 'movie/Images/Twitter-black.svg' %}" alt="Image"
+                id="twitter-black"></a>
+        <a href="http://www.instagram.com/moovr_ir"><img src="{% static 'movie/Images/Instagram-black.svg' %}" alt="Image"
+                id="instagram-black"></a>
+        <a href="http://www.t.me/moovr"> <img src="{% static 'movie/Images/Telegram-black.svg' %}" alt="Image" id="telegram-black">
+        </a>
+        <a href="#"><img src="{% static 'movie/Images/top.svg' %}" id="top"></a>
+    </div>
+
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
