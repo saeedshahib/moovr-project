@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'e&lc*zzp=h5=c2--w0%2(3xqh%ew6hm20d4jo^o!goo-edwq_l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moovr.pythonanywhere.com']
 
 
 # Application definition
