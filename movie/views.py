@@ -1,4 +1,4 @@
-from .models import Movie
+from .models import Movie, Comment
 from itertools import islice
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -7,6 +7,7 @@ from django.db import IntegrityError
 from django.contrib.auth import login, logout, authenticate
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
+from .form import CommentForm
 # Create your views here.
 
 def home(request):
@@ -19,7 +20,9 @@ def home(request):
 
 def detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
-    return render(request, 'movie/movie.html',{'movie':movie})
+    comments = Comment.objects.filter(movie = movie)
+    comments = comments.order_by("-DateAdded")
+    return render(request, 'movie/movie.html',{'movie':movie, "comments":comments})
 
 
 def signupuser(request):
@@ -53,3 +56,22 @@ def logoutuser(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
+@login_required
+def AddComment(request, movie_id):
+    currentpath = "/movie/"+str(movie_id)
+    if request.method == 'GET':
+        return redirect(currentpath)
+    else:
+        try:
+            movie = get_object_or_404(Movie, pk=movie_id)
+            comments = Comment.objects.filter(movie = movie)
+            comments = comments.order_by("-DateAdded")
+            form = CommentForm(request.POST)
+            newComment = form.save(commit=False)
+            newComment.user = request.user
+            newComment.movie = movie
+            newComment.save()
+            # return render(request, 'movie/movie.html', {'movie':movie,"comments":comments})
+            return redirect(currentpath)
+        except ValueError:
+            return render(request, 'movie/movie.html', {'form':CommentForm(), 'error':'Bad data passed in. Try again.'})
