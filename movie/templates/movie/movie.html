@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="{% static 'movie/style.css' %}">
     <link rel="stylesheet" href="{% static 'movie/css/style.css' %}">
     <link rel="icon" type="image/ico" href="{% static 'movie/Images/favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>{{ movie.Title }}</title>
 </head>
 
 <body>
     <header style="background: url(../../static/movie/Images/PhantomThread.jpg);" class="container-fluid" id="header">
 
-        <div id="logo" class="headericon"><a href="#"><img id="logoimage" src="{% static 'movie/Images/Logo.svg' %}"> </a></div>
+        <div id="logo" class="headericon"><a href="{% url 'home' %}"><img style="height: 38px;" id="logoimage" src="{% static 'movie/Images/favicon.ico' %}"> </a></div>
         <div id="socialicons">
             <div id="twitter" class="headericon"><a href="http://www.twitter.com/mooverir"><img
                         src="{% static 'movie/Images/Twitter.svg' %}" id="twitterimage"></a></div>
@@ -85,28 +86,36 @@
     </div>
 
 
-
-    <form action="/html/tags/html_form_tag_action.cfm" method="post">
-        <div>
-            <textarea name="comments" id="comments" placeholder="نظر شما درباره این فیلم ؟"
-                style="padding: 10px; padding-right: 2.5%;  padding-left: 2.5%;"></textarea>
-
-
+    <div class="col">
+    <div style="position: relative; top: 350px;" class="row justify-content-center mt-5">
+        <div class="col-md-5">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+            <form action="{% url 'movie:AddComment' movie.id %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="float-right" for="Content">نظر شما راجب این فیلم</label>
+                    <textarea style="height: 120px;" class="w-100 p-3" name="Content" class="form-control" id="Content" required></textarea>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="float-right" for="Rating">امتیاز شما به این فیلم</label>
+                    <select name="Rating" id="Rating" class="custom-select" required>
+                        <option selected value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
         </div>
-        <input type="submit" value="ارسال" id="submit">
-        <div id="spoil">
-            <a href="#"> <img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;margin-right: 20px;">
-            </a>
-
-            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
-            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
-            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
-            <a href="#"><img src="{% static 'movie/Images/StarEmpty.svg' %}" style="padding: 8px; float: right;"></a>
-
-
-    </form>
-
     </div>
+    </div>
+
 
 
     <div id="commentparent">
@@ -115,9 +124,7 @@
             <p style="float: right; padding: 10px; padding-right: 5%;">نام کاربر</p>
             <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/3Star.svg' %}"></div>
             <p style="float: right; padding: 10px;margin-right: 5px;">تاریخ</p>
-            <!-- <div class="commentcontent">متن
-                ddddddddddddddddddddddasdsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddکامنت
-            </div> -->
+
             <p class="commentp"
                 style="padding-top: 50px; text-align: right;margin-left: 5%; margin-right: 5%; position: absolute; width: 90%;  ">
                 متن کامنت
@@ -133,17 +140,26 @@
                 <p style="float: right; font-size: 10px;margin-left: 2px;">11</p>
             </div>
         </div>
+        {% for comment in comments %}
         <div class="commenting">
             <div class="name"></div>
-            <p style="float: right; padding: 10px; padding-right: 5%;">نام کاربر</p>
+            <p style="float: right; padding: 10px; padding-right: 5%;">{{ comment.user.username }}</p>
+            {% if comment.Rating == 1 %}
+            <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/1Star.svg' %}"></div>
+            {% elif comment.Rating == 2 %}
+            <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/2Star.svg' %}"></div>
+            {% elif comment.Rating == 3 %}
             <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/3Star.svg' %}"></div>
-            <p style="float: right; padding: 10px;margin-right: 5px;">تاریخ</p>
-            <!-- <div class="commentcontent">متن
-                ddddddddddddddddddddddasdsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddکامنت
-            </div> -->
+            {% elif comment.Rating == 4 %}
+            <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/4Star.svg' %}"></div>
+            {% elif comment.Rating == 5 %}
+            <div style="float: right; padding: 10px;margin-right: 5px;"><img src="{% static 'movie/Images/5Star.svg' %}"></div>
+            {% endif %}
+            <p style="float: right; padding: 10px;margin-right: 5px;">{{ comment.DateAdded }}</p>
+
             <p class="commentp"
                 style="padding-top: 50px; text-align: right;margin-left: 5%; margin-right: 5%; position: absolute; width: 90%;">
-                متن کامنت
+                {{ comment.Content }}
             </p>
             <div class="replycomment">
                 <img src="{% static 'movie/Images/Reply.svg' %}">
@@ -156,10 +172,9 @@
                 <p style="float: right; font-size: 10px;margin-left: 2px;">11</p>
             </div>
         </div>
+        {% endfor %}
 
     </div>
-
-
 
 
 
@@ -180,8 +195,6 @@
         <a href="#"><img src="{% static 'movie/Images/top.svg' %}" id="top"></a>
     </div>
 
-
-    </div>
 
 
 
