@@ -22,6 +22,12 @@ def detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     comments = Comment.objects.filter(movie = movie)
     comments = comments.order_by("-DateAdded")
+    rating = 0
+    for comment in comments:
+        rating += comment.Rating
+    rating = round(rating/comments.count()*2,1)
+    movie.Rating = rating
+    movie.save()
     return render(request, 'movie/movie.html',{'movie':movie, "comments":comments})
 
 

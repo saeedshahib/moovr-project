@@ -1,6 +1,8 @@
 from django.db import models
-from pytz import timezone
+from django.utils import timezone
 from django.contrib.auth.models import User
+import datetime
+import pytz
 
 # Create your models here.
 
