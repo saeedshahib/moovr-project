@@ -25,7 +25,10 @@ def detail(request, movie_id):
     rating = 0
     for comment in comments:
         rating += comment.Rating
-    rating = round(rating/comments.count()*2,1)
+    if comments.count() == 0:
+        rating = 0
+    else:
+        rating = round(rating/comments.count()*2,1)
     movie.Rating = rating
     movie.save()
     return render(request, 'movie/movie.html',{'movie':movie, "comments":comments})
