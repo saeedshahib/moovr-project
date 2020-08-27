@@ -1,18 +1,9 @@
+{% extends "movie/base.html" %}
+{% block content %}
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/movie/css/myStyle.css">
-    <link rel="stylesheet" href="static/movie/css/style.css">
-    <link rel="icon" type="image/ico" href="static/movie/Images/favicon.ico">
     <title>Sign Up</title>
 </head>
-
-
+<div style="color: white;" class="col">
 <div class="row justify-content-center mt-5">
     <div class="col-md-5">
         <h2>Sign Up</h2>
@@ -30,12 +21,12 @@
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp">
-                <small id="usernameHelp" class="form-text text-muted">Your username must be unique. We'll let you know if someone has taken it already.</small>
+                <small id="usernameHelp" >.Your username must be unique. We'll let you know if someone has taken it already</small>
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="text" name="email" class="form-control" id="email" aria-describedby="usernameHelp">
-                <small id="usernameHelp" class="form-text text-muted">We'll never share your email address with anyone.</small>
+                <small id="usernameHelp" >.We'll never share your email address with anyone</small>
             </div>
             <div class="form-group">
                 <label for="password1">Password</label>
@@ -49,7 +40,9 @@
         </form>
         <hr>
         <div class="text-center">
-            Do you already have an account? <a href="{% url 'loginuser' %}">Login here</a>
+            Do you already have an account? <a style="color: white;" href="{% url 'loginuser' %}">Login here</a>
         </div>
     </div>
 </div>
+</div>
+{% endblock %}

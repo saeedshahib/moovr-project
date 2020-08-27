@@ -1,7 +1,9 @@
 {% extends "movie/base.html" %}
-
 {% block content %}
-<div class="col">
+<head>
+    <title>Login</title>
+</head>
+<div style="color: white;" class="col">
 <div class="row justify-content-center mt-5">
     <div class="col-md-5">
         <h2>Login</h2>
@@ -21,14 +23,14 @@
                 <input type="text" name="username" class="form-control" id="username">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label  for="password">Password</label>
                 <input type="password" name="password" class="form-control" id="password">
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>
         <hr>
-        <div class="text-center">
-            Need an account? <a href="{% url 'signupuser' %}">Sign Up here</a>
+        <div  class="text-center">
+            Need an account? <a style="color: white;" href="{% url 'signupuser' %}">Sign Up here</a>
         </div>
     </div>
 </div>
