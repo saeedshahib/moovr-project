@@ -7,17 +7,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../../static/movie/css/myStyle.css">
     <link rel="stylesheet" href="../../static/movie/css/style.css">
     <link rel="icon" type="image/ico" href="static/movie/Images/favicon.ico">
-    <title>Login</title>
 </head>
 <body>
-    <header id="header">
+    <header class="container-fluid" id="header">
+    <div id="logo" class="headericon"><a href="{% url 'home' %}"><img style="height: 38px;" id="logoimage" src="{% static 'movie/Images/favicon.ico' %}"> </a></div>
+    <div id="socialicons">
+        <div id="twitter" class="headericon"><a href="http://www.twitter.com/mooverir"><img src="{% static 'movie/Images/Twitter.svg' %}"
+                    id="twitterimage"></a></div>
+        <div id="telegram" class="headericon"><a href="http://t.me/moovr"><img src="{% static 'movie/Images/Telegram.svg' %}"
+                    id="telegramimage"></a>
+        </div>
+    </div>
+    <div id="profile" class="headericon"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+        <img src="{% static 'movie/Images/Profile.svg' %}" id="profileimage">
+            </a>
+    </div>
+    <div id="instagram" class="headericon"><a href="http://www.instagram.com/moovr_ir"><img
+                src="{% static 'movie/Images/Instagram.svg' %}" id="instagramimage"></a>
+    </div>
     </header>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    {% block content %}{% endblock %}
 </body>
+</html>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">پروفایل شما</h5>
+                <div class="float-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="modal-body">
+                <h6>Username : {{ user.username }}</h6>
+                <h6>EmailAddress : {{ user.email }}</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form method="POST" action="{% url 'logoutuser' %}">
+                    <button type="submit" class="btn btn-warning">Log Out</button>
+                    {% csrf_token %}
+                </form>
+            </div>
+            {% else %}
+            <div class="modal-body">
+                <h6>در کمتر از ۳۰ ثانیه اکانت بسازید و از مزایای موور بهره مند شوید!</h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalScrollable1">Login</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalScrollable2">Sign Up</button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">ورود به موور</h5>
+                <div class="float-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{% url 'loginuser' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label  for="password">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="modal-footer">
+                        <small>need an account?<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalScrollable2">Sign Up here</a></small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Sign Up Modal -->
+<div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">عضویت در موور</h5>
+                <div class="float-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{% url 'signupuser' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp" required>
+                        <small id="usernameHelp" >.Your username must be unique. We'll let you know if someone has taken it already</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="usernameHelp" required>
+                        <small id="usernameHelp" >.We'll never share your email address with anyone</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password1">Password</label>
+                        <input minlength="8" type="password" name="password1" class="form-control" id="password1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password2">Confirm Password</label>
+                        <input minlength="8" type="password" name="password2" class="form-control" id="password2" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <div class="modal-footer">
+                        <small>have an account?<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModalScrollable1">Login here</a></small>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% block content %}{% endblock %}

@@ -36,7 +36,7 @@ def detail(request, movie_id):
 
 def signupuser(request):
     if request.method == 'GET':
-        return render(request, 'movie/signupuser.html', {'form':UserCreationForm()})
+        return redirect('home')
     else:
         if request.POST['password1'] == request.POST['password2']:
             try:
@@ -45,9 +45,9 @@ def signupuser(request):
                 login(request, user)
                 return redirect('home')
             except IntegrityError:
-                return render(request, 'movie/signupuser.html', {'form':UserCreationForm(), 'error':'That username has already been taken. Please choose a new username'})
+                return render(request, 'movie/loginuser.html', {'form':UserCreationForm(), 'error':'That username has already been taken. Please choose a new username'})
         else:
-            return render(request, 'movie/signupuser.html', {'form':UserCreationForm(), 'error':'Passwords did not match'})
+            return render(request, 'movie/loginuser.html', {'form':UserCreationForm(), 'error':'Passwords did not match'})
 
 def loginuser(request):
     if request.method == 'GET':
