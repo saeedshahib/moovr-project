@@ -39,7 +39,10 @@
                         id="telegramimage"></a>
             </div>
         </div>
-        <div id="profile" class="headericon"><a href="#"><img src="static/movie/Images/Profile.svg" id="profileimage"></a></div>
+        <div id="profile" class="headericon"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+            <img src="static/movie/Images/Profile.svg" id="profileimage">
+                </a>
+        </div>
         <div id="instagram" class="headericon"><a href="http://www.instagram.com/moovr_ir"><img
                     src="static/movie/Images/Instagram.svg" id="instagramimage"></a>
         </div>
@@ -100,15 +103,51 @@
     <!-- ---------------------------------------- -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">پروفایل شما</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="modal-body">
+          <h6>Username : {{ user.username }}</h6>
+          <h6>EmailAddress : {{ user.email }}</h6>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <form method="POST" action="{% url 'logoutuser' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-warning">Log Out</button>
+        </form>
+        </div>
+        {% else %}
+        <div class="modal-body">
+            <h6>در کمتر از ۳۰ ثانیه اکانت بسازید و از مزایای موور بهره مند شوید!</h6>
+        </div>
+        <div class="modal-footer">
+        <a href="{% url 'loginuser' %}">
+            <button type="button" class="btn btn-primary">Login</button>
+        </a>
+        <a href="{% url 'signupuser' %}">
+            <button type="button" class="btn btn-primary">Sign Up</button>
+        </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
