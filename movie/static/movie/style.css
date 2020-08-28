@@ -24,8 +24,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 p,
 blockquote,
 pre,
@@ -45,7 +43,6 @@ kbd,
 q,
 s,
 samp,
-small,
 strike,
 strong,
 sub,
@@ -64,7 +61,6 @@ ul,
 li,
 fieldset,
 form,
-label,
 legend,
 table,
 caption,
@@ -102,7 +98,6 @@ video {
   vertical-align: baseline;
 }
 body {
-  /* width: 100vw; */
   background-color: #eaeaea;
   font-size: 13px;
 }

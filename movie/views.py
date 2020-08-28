@@ -65,6 +65,8 @@ def logoutuser(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
+    else:
+        return redirect('home')
 @login_required
 def AddComment(request, movie_id):
     currentpath = "/movie/"+str(movie_id)
