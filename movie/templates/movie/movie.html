@@ -13,6 +13,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{% static 'movie/style.css' %}">
     <link rel="stylesheet" href="{% static 'movie/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'movie/css/star.css' %}">
     <!-- <link rel="icon" type="image/ico" href="{% static 'movie/Images/favicon.ico' %}"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <title>{{ movie.Title }}</title>
@@ -86,24 +87,27 @@
                     <label class="float-right" for="Content">نظر شما راجب این فیلم</label>
                     <textarea style="height: 120px;" class="w-100 p-3" name="Content" class="form-control" id="Content" required></textarea>
                 </div>
-                <div class="form-group col-md-4">
                     <label class="float-right" for="Rating">امتیاز شما به این فیلم</label>
-                    <select name="Rating" id="Rating" class="custom-select" required>
-                        <option selected value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Send</button>
+                    <div class="float-left">
+                              <div class="rating">
+                                  <input id="star5" name="Rating" type="radio" value="5" class="radio-btn hide" />
+                                  <label for="star5" >☆</label>
+                                  <input id="star4" name="Rating" type="radio" value="4" class="radio-btn hide" />
+                                  <label for="star4" >☆</label>
+                                  <input id="star3" name="Rating" type="radio" value="3" class="radio-btn hide" />
+                                  <label for="star3" >☆</label>
+                                  <input id="star2" name="Rating" type="radio" value="2" class="radio-btn hide" />
+                                  <label for="star2" >☆</label>
+                                  <input id="star1" name="Rating" type="radio" value="1" class="radio-btn hide" />
+                                  <label for="star1" >☆</label>
+                                  <div class="clear"></div>
+                              </div>
+                              <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
             </form>
         </div>
     </div>
-    </div>
-
-
-
+</div>
     <div id="commentparent">
         <div class="commenting" id="firstcommenting">
             <div class="name"></div>
