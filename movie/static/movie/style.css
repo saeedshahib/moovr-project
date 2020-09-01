@@ -1,465 +1,1066 @@
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  background-color: #eaeaea;
-  font-size: 13px;
-}
-#header {
-  position: static;
-  background: url(Images/PhantomThread.jpg) center center;
-  background-size: cover;
-  height: 100vh;
-
-  /* position: relative; */
-  /* bottom: 0; */
-}
-#logo {
-  position: absolute;
-  /* position: absolute; */
-  float: left;
-  left: 15px;
-  margin-top: 10px;
-}
-
-#twitter {
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  top: 12px;
-}
-#instagram {
-  position: absolute;
-  left: 50%;
-  margin-left: -25px;
-  top: 10px;
-}
-#telegram {
-  position: absolute;
-  left: 50%;
-  margin-left: 45px;
-  top: 12px;
-}
-#profile {
-  /* position: absolute; */
-  float: right;
-  margin-top: 10px;
-  margin-right: 15px;
-}
-.site-header__nav {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  background: #fff;
-  font-size: 15px;
-  z-index: 1006;
-  width: 100%;
-}
-.site-header,
-.site-header__nav,
-.site-header__nav-main {
-  height: 60px;
-}
-
-user agent stylesheet nav {
-  display: block;
-}
-Style Attribute {
-  touch-action: pan-y;
-  -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-body {
-  box-sizing: border-box;
-  color: #323232;
-  font-family: "DMSans", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.4;
-}
-html {
-  font-size: 100%;
-  height: 100%;
-}
-html {
-  line-height: 1;
-}
-#info {
-  float: left;
-  line-height: 25px;
-  /* background-color: aqua; */
-  position: absolute;
-  color: #fff;
-  bottom: 50px;
-  left: 100px;
-  /* margin-left: 100px; */
-}
-h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-#opacity {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 250px;
-  width: 100%;
-  right: 0;
-  bottom: 0;
-}
-#summary {
-  text-align: right;
-  /* background-color:aqua; */
-  color: #fff;
-  float: right;
-  position: absolute;
-  width: 500px;
-  bottom: 50px;
-  right: 100px;
-  height: 80px;
-  padding-bottom: 0;
-}
-#main {
-  position: absolute;
-  color: #fff;
-  background-color: #fff;
-  height: 350px;
-  width: 88%;
-  left: 50%;
-  margin-left: -44%;
-}
-#left {
-  float: left;
-}
-#cast {
-  /* background-color: aqua; */
-  font-family: sans-serif;
-  color: black;
-  font-size: 13px;
-  text-align: center;
-  margin-top: 5px;
-}
-#castparent {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  width: 88%;
-  left: 50%;
-  margin-left: -44%;
-  margin-top: 10px;
-}
-.download {
-  position: relative;
-  height: 50px;
-  width: 560px;
-  background-color: #f3f3f3;
-  margin-top: 100px;
-  /* left: 50%;
-  margin-left: -280px; */
-  margin: 20px auto;
-}
-.donwloadbutton {
-  float: left;
-  position: absolute;
-  height: 50px;
-  width: 170px;
-  background-color: #001489;
-  left: 0;
-  padding: 15px;
-  padding-left: 80px;
-}
-#downloadarrow {
-  position: absolute;
-  left: 40px;
-}
-#quality {
-  font-family: Arial, Helvetica, sans-serif;
-
-  position: absolute;
-  height: 50px;
-  color: black;
-  padding: 15px;
-  padding-right: 40px;
-  /* background-color: antiquewhite; */
-  float: right;
-  text-align: right;
-}
-#quantity {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  height: 50px;
-  color: black;
-  padding: 15px;
-  padding-right: 250px;
-  /* background-color: antiquewhite; */
-  float: right;
-}
-#firstdownload {
-  margin-top: 100px;
-}
-#subtitle {
-  background-color: #5c5c5c;
-}
 a {
-  color: white;
-}
-#title {
-  position: relative;
-  top: 380px;
-  width: 60%;
-  left: 50%;
-  margin-left: -30%;
-  border: none;
-  padding: 10px;
-}
-#submit {
-  /* background: url(../Images/sendbutton.svg) center center; */
-  background-size: cover;
-  /* position: relative; */
-  bottom: 0;
-  float: left;
-  margin-top: 400px;
-  margin-left: 20%;
-  border: none;
-  height: 40px;
-  width: 120px;
-  background-color: #403f3f;
   color: #ffffff;
-  border-radius: 1px;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
-.comment {
-  position: relative;
-}
-#sendbutton {
-  position: absolute;
-  background-color: aqua;
-  left: 250px;
-}
-#time {
-  /* background-color: aqua; */
-  font-family: Arial, Helvetica, sans-serif;
-  color: #9e9d9d;
-  size: 10px;
-}
-#timeicon {
-  /* position: absolute; */
-  float: left;
-  margin-top: 3px;
-  margin-right: 2px;
-}
-#speakericon {
-  margin-left: 7px;
-  float: left;
-  margin-top: 3px;
-  margin-right: 3px;
-}
-#footer {
-  position: fixed;
-  /* margin-top: 40px; */
-  /* height: 86px; */
-  bottom: 0;
-  width: 100%;
-  background-color: #ffffff;
-}
-#twitter-black {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  margin-left: -100px;
-}
-
-#instagram-black {
-  position: absolute;
-  left: 50%;
-  margin-left: -12.25px;
-  top: 23px;
-}
-#telegram-black {
-  position: absolute;
-  left: 50%;
-  margin-left: 70px;
-  top: 25px;
-}
-#top {
-  float: right;
-  margin-right: 40px;
-  margin-top: 40px;
-  width: 20px;
-}
-#commentparent {
-  position: relative;
-  height: 1000px;
-  width: 100%;
-  right: 0;
-}
-#comments {
-  position: relative;
-  width: 60%;
-  top: 400px;
-  left: 50%;
-  margin-left: -30%;
-  /* height: 100px; */
-  min-height: 100px;
-  max-height: max-content;
-  border: none;
-}
-.commenting {
-  background-color: #ffffff;
-  position: relative;
-  width: 60%;
-  height: 200px;
-  /* left: 50%; */
-  margin: 0 auto;
-  margin-top: 0px;
-  /* margin-left: -30%; */
-  border-bottom: solid;
-  border-width: 0.1px;
-  border-color: #9e9d9d;
-}
-#firstcommenting {
-  margin-top: 470px;
-}
-
-.name {
-  position: absolute;
-  /* background-color: aqua; */
-  height: 40px;
-  width: 45%;
-  margin-right: 5%;
-  border-bottom: solid;
-  border-width: 0.1px;
-}
-#spoil {
-  background-color: #5c5c5c;
-  /* position: relative; */
-  bottom: 0;
-  float: left;
-  margin-top: 400px;
-
-  border: none;
-  height: 40px;
-  width: 225px;
-  /* background-color: #001489; */
+a:hover {
   color: #ffffff;
-  border-radius: 1px;
 }
-/* .commentcontent{
-  background-color: yellowgreen;
-  width: 90%;
-  position: absolute;
-  height: max-content;
-  color: black;
-  margin-top: 50px;
-  margin-right: 5%;
-  text-align: right;
-  overflow: auto;
-} */
-.likecomment {
-  position: absolute;
-  right: 10%;
-  bottom: 2%;
-  float: right;
+@media only screen and (min-width: 1024px) {
+  #smallfooter {
+    display: none;
+  }
+  #smallfooter {
+    display: none;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  menu,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+  body {
+    /* width: 100vw; */
+    background-color: #eaeaea;
+    font-size: 13px;
+  }
+  #header {
+    position: static;
+    /* background: url(../../static/movie/Images/Hellorhighwater.jpg) center center; */
+    background-size: cover;
+    height: 100vh;
+
+    /* position: relative; */
+    /* bottom: 0; */
+  }
+  #logo {
+    position: absolute;
+    /* position: absolute; */
+    float: left;
+    left: 25px;
+    margin-top: 12px;
+  }
+  #logoimage {
+    height: 30px;
+    float: left;
+    left: 20px;
+    margin-top: 0px;
+  }
+
+  #twitter {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 12px;
+  }
+  #instagram {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 10px;
+  }
+  #telegram {
+    position: absolute;
+    left: 50%;
+    margin-left: 45px;
+    top: 12px;
+  }
+  #profile {
+    /* position: absolute; */
+    float: right;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+
+  .site-header__nav {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    font-size: 15px;
+    z-index: 1006;
+    width: 100%;
+  }
+  .site-header,
+  .site-header__nav,
+  .site-header__nav-main {
+    height: 60px;
+  }
+
+  user agent stylesheet nav {
+    display: block;
+  }
+  Style Attribute {
+    touch-action: pan-y;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  body {
+    box-sizing: border-box;
+    color: #323232;
+    font-family: "DMSans", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  html {
+    font-size: 100%;
+    height: 100%;
+  }
+  html {
+    line-height: 1;
+  }
+  #info {
+    float: left;
+    line-height: 25px;
+    /* background-color: aqua; */
+    position: absolute;
+    color: #fff;
+    bottom: 50px;
+    left: 100px;
+    /* margin-left: 100px; */
+    font-family: sans-serif;
+  }
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  #opacity {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 250px;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  #summary {
+    text-align: right;
+    /* background-color:aqua; */
+    color: #fff;
+    float: right;
+    position: absolute;
+    width: 600px;
+    bottom: 50px;
+    right: 100px;
+    height: 150px;
+    padding-bottom: 0;
+    bottom: 30px;
+    line-height: 25px;
+  }
+  #about {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  #main {
+    top: 40px;
+    position: relative;
+    color: #fff;
+    background-color: #ffffff;
+    height: 330px;
+    width: 60%;
+    left: 50%;
+    margin-left: -30%;
+    padding-bottom: 20px;
+  }
+  #cast {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    left: 0;
+    transition-duration: 0.3s;
+    /* font-family: sans-serif; */
+  }
+  #cast:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transition-duration: 0.3s;
+  }
+  #casttitle {
+    font-size: 25px;
+    padding: 20px 30px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    /* letter-spacing: 1px; */
+  }
+  .castinfo {
+    font-size: 14px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-right: 60px;
+    line-height: 20px;
+    color: #9e9d9d;
+    font-weight: 500;
+  }
+  .castinfovar {
+    color: #ffffff;
+    font-weight: 100;
+  }
+  .castinfovar:hover {
+    color: #ffdd47;
+  }
+  #star {
+    margin-top: 20px;
+  }
+  #left {
+    float: left;
+  }
+
+  #castparent {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 88%;
+    left: 50%;
+    margin-left: -44%;
+    margin-top: 10px;
+  }
+  .download {
+    position: relative;
+    height: 50px;
+    width: 560px;
+    background-color: #f3f3f3;
+    /* margin-top: 100px; */
+    /* left: 50%;
+    margin-left: -280px; */
+    margin: 20px auto;
+  }
+  .downloadbutton {
+    /* float: left; */
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    background-color: #04007a;
+    right: 25%;
+    margin-right: -125px;
+    margin-top: 40px;
+    /* padding: 15px;
+    padding-left: 80px;  */
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  }
+  .downloadbutton:hover {
+    background-color: #001489;
+  }
+  .downloadtitle {
+    /* background-color: #323232; */
+    text-align: right;
+    margin-left: 120px;
+    font-size: 17px;
+    margin-top: 10px;
+    border-right: solid #a9a9a9;
+    border-width: 0.05px;
+    padding: 5px;
+    padding-right: 25px;
+    padding-top: 5px;
+    float: left;
+    padding-bottom: 20px;
+  }
+  .downloadquantity {
+    color: #a9a9a9;
+    position: absolute;
+    font-family: sans-serif;
+    border-right: solid #eaeaea;
+    float: right;
+    right: 87px;
+    border: none;
+    font-size: 12px;
+    bottom: 15px;
+  }
+  #srt {
+    font-size: 11px;
+  }
+  .downloadquality {
+    position: absolute;
+    font-family: sans-serif;
+    border: none;
+    font-size: 15px;
+    left: 30px;
+    /* top: 25px; */
+    bottom: 24px;
+    /* color: #A9A9A9; */
+  }
+  #downloadarrow {
+    /* position: absolute; */
+    float: right;
+    margin-right: 25px;
+    margin-top: 22px;
+    height: 22px;
+    transition: height 0.2s;
+  }
+  .downloadbutton:hover #downloadarrow {
+    height: 25px;
+    /* margin-top: 25px; */
+    transition: height 0.2s;
+  }
+
+  #p720 {
+    margin-top: 130px;
+  }
+  #sub {
+    margin-top: 220px;
+    background-color: #242836;
+  }
+  #sub:hover {
+    background-color: black;
+  }
+  #subtitle {
+    position: absolute;
+    /* font-family: sans-serif; */
+    border: none;
+    font-size: 15px;
+    left: 30px;
+    /* top: 25px; */
+    bottom: 24px;
+  }
+  #quality {
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: absolute;
+    height: 50px;
+    color: black;
+    padding: 15px;
+    padding-right: 40px;
+    /* background-color: antiquewhite; */
+    float: right;
+    text-align: right;
+  }
+  #quantity {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    height: 50px;
+    color: black;
+    padding: 15px;
+    padding-right: 250px;
+    /* background-color: antiquewhite; */
+    float: right;
+  }
+  #firstdownload {
+    /* margin-top: 100px; */
+  }
+
+  a {
+    color: white;
+  }
+  #title {
+    position: relative;
+    top: 380px;
+    width: 60%;
+    left: 50%;
+    margin-left: -30%;
+    border: none;
+    padding: 10px;
+  }
+  #submit {
+    /* background: url(../Images/sendbutton.svg) center center; */
+    background-size: cover;
+    /* position: relative; */
+
+    float: left;
+    /* margin-top: 400px; */
+    /* margin-left: 20%; */
+    border: none;
+    height: 40px;
+    width: 120px;
+    background-color: #04007a;
+    color: #ffffff;
+    /* border-radius: 1px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: none;
+    outline: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  #submit:hover {
+    background-color: #001489;
+  }
+  .comment {
+    position: relative;
+  }
+  #sendbutton {
+    position: absolute;
+    background-color: aqua;
+    left: 250px;
+  }
+  #time {
+    /* background-color: aqua; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #9e9d9d;
+    size: 10px;
+  }
+  #timeicon {
+    /* position: absolute; */
+    float: left;
+    margin-top: 3px;
+    margin-right: 2px;
+  }
+  #speakericon {
+    margin-left: 7px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 3px;
+  }
+  #footer {
+    position: relative;
+    margin-top: 40px;
+    height: 150px;
+    bottom: 0;
+    background-color: #172f33;
+  }
+  #twitter-black {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -100px;
+  }
+
+  #instagram-black {
+    position: absolute;
+    left: 50%;
+    margin-left: -12.25px;
+    top: 40%;
+  }
+  #telegram-black {
+    position: absolute;
+    left: 50%;
+    margin-left: 70px;
+    top: 40%;
+  }
+  #top {
+    position: absolute;
+    float: right;
+    right: 40px;
+    /* margin-top: 40px; */
+    /* width: 20px; */
+    top: 50%;
+    /* fill: #ffffff; */
+    height: 13px;
+  }
+  #commentparent {
+    position: relative;
+    height: max-content;
+    width: 100%;
+    right: 0;
+  }
+  #comments {
+    position: relative;
+    width: 60%;
+    top: 400px;
+    left: 50%;
+    margin-left: -30%;
+    /* height: 100px; */
+    min-height: 100px;
+    max-height: max-content;
+    border: none;
+  }
+  .commenting {
+    background-color: #ffffff;
+    position: relative;
+    width: 60%;
+    min-height: 200px;
+    max-height: max-content;
+    /* left: 50%; */
+    margin: 0 auto;
+    margin-top: 0px;
+    /* margin-left: -30%; */
+    border-bottom: solid;
+    border-width: 0.1px;
+    border-color: #9e9d9d;
+  }
+
+  .name {
+    position: absolute;
+    /* background-color: aqua; */
+    height: 40px;
+    width: 45%;
+    margin-right: 5%;
+    border-bottom: solid;
+    border-width: 0.1px;
+  }
+  .commentstar {
+    float: right;
+    padding: 10px;
+    margin-right: 5px;
+  }
+  #spoil {
+    background-color: #172f33;
+    /* position: relative; */
+    /* bottom: 0; */
+    float: left;
+    /* margin-top: 400px; */
+
+    border: none;
+    height: 40px;
+    width: 225px;
+    /* background-color: #001489; */
+    color: #ffffff;
+    border-radius: 1px;
+    outline: none;
+  }
+  /* .commentcontent{
+    background-color: yellowgreen;
+    width: 90%;
+    position: absolute;
+    height: max-content;
+    color: black;
+    margin-top: 50px;
+    margin-right: 5%;
+    text-align: right;
+    overflow: auto;
+  } */
+  .likecomment {
+    position: absolute;
+    right: 10%;
+    bottom: 2%;
+    float: right;
+  }
+  .replycomment {
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    float: right;
+  }
+  #textareadiv {
+    /* background-color: aqua; */
+    position: relative;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    width: 60%;
+    margin-top: 100px;
+  }
+  #textarea {
+    background-color: #172f33;
+    /* position: absolute; */
+    height: 70px;
+    margin: 0px auto;
+    width: 100%;
+    outline: none;
+    border: none;
+    max-height: max-content;
+    padding: 0 5%;
+    padding-top: 23px;
+    color: white;
+    transition: height 0.3s;
+    line-height: 25px;
+  }
+  #textarea:focus {
+    height: 200px;
+    transition: height 0.3s;
+  }
+
+  #submitparent {
+    /* background-color: aqua; */
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 40px;
+    margin-left: 20%;
+  }
+  #logo-black {
+    position: absolute;
+    float: left;
+    left: 40px;
+    /* margin-top: 40px; */
+    /* width: 20px; */
+    top: 40%;
+    fill: #ffffff;
+    height: 30px;
+  }
+  .commentp {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: right;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    line-height: 25px;
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.7; /* Firefox */
+  }
 }
-.replycomment {
-  position: absolute;
-  right: 5%;
-  bottom: 2%;
-  float: right;
+
+@media only screen and (max-width: 1023px) {
+  #footer {
+    display: none;
+  }
+  #cast {
+    display: none;
+  }
+  #header {
+    position: static;
+    background: url(../Images/Hellorhighwater.jpg) center center;
+    background-size: cover;
+    height: 80vh;
+
+    /* position: relative; */
+    /* bottom: 0; */
+  }
+  #logo {
+    position: absolute;
+    /* position: absolute; */
+    float: left;
+    left: 25px;
+    margin-top: 12px;
+  }
+  #logoimage {
+    height: 30px;
+    float: left;
+    left: 20px;
+    margin-top: 0px;
+  }
+
+  #twitter {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 12px;
+  }
+  #instagram {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 10px;
+  }
+  #telegram {
+    position: absolute;
+    left: 50%;
+    margin-left: 45px;
+    top: 12px;
+  }
+  #profile {
+    /* position: absolute; */
+    float: right;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+
+  #opacity {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 40%;
+    width: 100%;
+    right: 0;
+    bottom: 20vh;
+  }
+  #info {
+    float: left;
+    line-height: 25px;
+    /* background-color: aqua; */
+    position: absolute;
+    color: #fff;
+    bottom: 70px;
+    left: 50px;
+    /* margin-left: 100px; */
+    font-family: sans-serif;
+    top: 50px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 100;
+    font-family: sans-serif;
+  }
+  #country {
+    font-weight: 100;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  #time {
+    /* background-color: aqua; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #9e9d9d;
+    size: 10px;
+  }
+  #timeicon {
+    /* position: absolute; */
+    float: left;
+    margin-top: 3px;
+    margin-right: 2px;
+  }
+  #speakericon {
+    margin-left: 17px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 3px;
+  }
+  #timenumber {
+    float: left;
+  }
+  .genre {
+    margin-top: 10px;
+  }
+  #summary {
+    text-align: right;
+    background-color: #fff;
+    color: #666666;
+    float: right;
+    /* position: relative; */
+    width: 100%;
+    bottom: 50px;
+    right: 50px;
+    height: 290px;
+    /* padding-bottom: 0; */
+    top: 20px;
+    line-height: 25px;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    /* margin: 30px;
+    margin-top: 10px; */
+  }
+  #about {
+    font-size: 17px;
+    margin-top: 7px;
+    margin-right: 15px;
+  }
+  #q {
+    font-size: 15px;
+  }
+  #main {
+    top: 300px;
+    position: relative;
+    color: #fff;
+    background-color: #ffffff;
+    height: 320px;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .downloadbutton {
+    /* float: left; */
+    position: absolute;
+    height: 70px;
+    width: 250px;
+    background-color: #04007a;
+    right: 50%;
+    margin-right: -125px;
+    margin-top: 30px;
+    /* padding: 15px;
+    padding-left: 80px;  */
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  }
+  .downloadbutton:hover {
+    background-color: #001489;
+  }
+  .downloadtitle {
+    /* background-color: #323232; */
+    text-align: right;
+    margin-left: 120px;
+    font-size: 17px;
+    margin-top: 10px;
+    border-right: solid #a9a9a9;
+    border-width: 0.05px;
+    padding: 5px;
+    padding-right: 25px;
+    padding-top: 5px;
+    float: left;
+    padding-bottom: 20px;
+  }
+  .downloadquantity {
+    color: #a9a9a9;
+    position: absolute;
+    font-family: sans-serif;
+    border-right: solid #eaeaea;
+    float: right;
+    right: 87px;
+    border: none;
+    font-size: 12px;
+    bottom: -2px;
+  }
+  .downloadquality {
+    position: absolute;
+    font-family: sans-serif;
+    border: none;
+    font-size: 15px;
+    left: 30px;
+    /* top: 25px; */
+    bottom: 10px;
+    /* color: #A9A9A9; */
+  }
+  #downloadarrow {
+    /* position: absolute; */
+    float: right;
+    margin-right: 25px;
+    margin-top: 22px;
+    height: 22px;
+    transition: height 0.2s;
+  }
+  #p720 {
+    margin-top: 130px;
+  }
+  #sub {
+    margin-top: 220px;
+    background-color: #242836;
+  }
+  #sub:hover {
+    background-color: black;
+  }
+  #subtitle {
+    position: absolute;
+    /* font-family: sans-serif; */
+    border: none;
+    font-size: 15px;
+    left: 30px;
+    /* top: 25px; */
+    bottom: 10px;
+  }
+  #textareadiv {
+    /* background-color: aqua; */
+    position: relative;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    width: 90%;
+    margin-top: 350px;
+    max-width: ;
+  }
+  #textarea {
+    background-color: #172f33;
+    /* position: absolute; */
+    height: 70px;
+    margin: 0px auto;
+    width: 100%;
+    outline: none;
+    border: none;
+    max-height: max-content;
+    padding: 0 5%;
+    padding-top: 23px;
+    color: white;
+    transition: height 0.3s;
+    line-height: 25px;
+  }
+  #textarea:focus {
+    height: 200px;
+    transition: height 0.3s;
+  }
+  #submitparent {
+    /* background-color: aqua; */
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 40px;
+    margin-left: 5%;
+  }
+  #submit {
+    /* background: url(../Images/sendbutton.svg) center center; */
+    background-size: cover;
+    /* position: relative; */
+
+    float: left;
+    /* margin-top: 400px; */
+    /* margin-left: 20%; */
+    border: none;
+    height: 40px;
+    width: 30%;
+    background-color: #04007a;
+    color: #ffffff;
+    /* border-radius: 1px; */
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: none;
+    outline: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    left: 0;
+  }
+  #submit:hover {
+    background-color: #001489;
+  }
+  .comment {
+    position: relative;
+  }
+  #sendbutton {
+    position: absolute;
+    background-color: aqua;
+    /* left: 250px; */
+  }
+  #spoil {
+    background-color: #172f33;
+    /* position: relative; */
+    /* bottom: 0; */
+    float: left;
+    /* margin-top: 400px; */
+
+    border: none;
+    height: 40px;
+    width: 50%;
+    /* background-color: #001489; */
+    color: #ffffff;
+    border-radius: 1px;
+    outline: none;
+  }
+  .commenting {
+    background-color: #ffffff;
+    position: relative;
+    width: 90%;
+    min-height: 200px;
+    max-height: max-content;
+    /* left: 50%; */
+    margin: 0 auto;
+    margin-top: 0px;
+    /* margin-left: -30%; */
+    border-bottom: solid;
+    border-width: 0.1px;
+    border-color: #9e9d9d;
+  }
+  .name {
+    position: absolute;
+    /* background-color: aqua; */
+    height: 60px;
+    width: 45%;
+    margin-right: 5%;
+    border-bottom: solid;
+    border-width: 0.1px;
+  }
+  .commentstar {
+    position: absolute;
+    /* background-color: #ffdd47; */
+    padding-top: 35px;
+    float: right;
+    padding-right: 5%;
+    margin-right: 0;
+    right: 0;
+  }
+  #commentparent {
+    position: relative;
+    height: max-content;
+    width: 100%;
+    right: 0;
+  }
+  .commentp {
+    font-size: 13px;
+    padding: 10px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: right;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    line-height: 25px;
+  }
+  #smallfooter {
+    position: relative;
+    margin-top: 40px;
+    height: 150px;
+    bottom: 0;
+    background-color: #172f33;
+  }
+  #smalllogo-black {
+    position: absolute;
+    /* float: left; */
+    left: 50%;
+    margin-left: -35px;
+    /* margin-top: 40px; */
+    /* width: 20px; */
+    top: 30%;
+    fill: #ffffff;
+    width: 70px;
+  }
+  #moovr {
+    position: absolute;
+    /* background-color: #cc0c0c; */
+    color: #ffffff;
+    text-align: center;
+    left: 50%;
+    margin-left: -28.5px;
+    bottom: 18px;
+    letter-spacing: 2px;
+  }
 }
