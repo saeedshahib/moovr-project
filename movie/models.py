@@ -8,7 +8,11 @@ import pytz
 
 class Movie(models.Model):
     Title = models.CharField(max_length = 250)
-    image = models.ImageField(upload_to = 'movie/images/')
+    FilmOfTheDayImage = models.ImageField(upload_to = 'movie/images/')
+    FilmOfTheDaySmallImage = models.ImageField(upload_to = 'movie/images/')
+    BoxFilmImage = models.ImageField(upload_to = 'movie/images')
+    SmallBoxFilmImage = models.ImageField(upload_to = 'movie/images/')
+    FilmBackgroundImage = models.ImageField(upload_to = 'movie/images/')
     Time = models.IntegerField()
     Language = models.CharField(max_length = 250)
     Rating = models.FloatField(default=0)
@@ -18,11 +22,15 @@ class Movie(models.Model):
     Cinematography = models.CharField(max_length = 250,blank=True)
     Screenplay = models.CharField(max_length = 250,blank=True)
     Music = models.CharField(max_length = 250,blank=True)
+    Writer = models.CharField(max_length = 250,blank=True)
     Year = models.IntegerField()
     Cast = models.TextField()
     Synopsis = models.TextField()
     IsMovieOfDay = models.BooleanField(default=False)
     DateAdded = models.DateTimeField()
+    FirstDownloadLink = models.URLField()
+    SecondDownloadLink = models.URLField()
+    SubtitleLink = models.URLField()
     
     def __str__(self):
         return self.Title

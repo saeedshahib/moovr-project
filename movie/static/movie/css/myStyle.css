@@ -1,8 +1,10 @@
+#smallcontent {
+  display: none;
+}
 body {
   /* width: 100vw; */
   background-color: #eaeaea;
   font-size: 13px;
-  
 }
 
 #header {
@@ -13,13 +15,24 @@ body {
   width: 100%;
   /* position: relative; */
   bottom: 0;
+  background-color: rgba(0, 0, 0);
+  /* margin-bottom: 50px; */
+}
+#overlay {
+  position: absolute;
+  height: 1vh;
+  width: 1vw;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #logo {
   position: fixed;
   /* position: absolute; */
   float: left;
-  left: 15px;
-  margin-top: 10px;
+  left: 25px;
+  margin-top: 12px;
+}
+#twitter:hover {
+  fill: #001489;
 }
 
 #twitter {
@@ -40,6 +53,13 @@ body {
   margin-left: 45px;
   top: 12px;
 }
+#logoimage {
+  height: 30px;
+  float: left;
+  left: 20px;
+  margin-top: 0px;
+}
+
 #profile {
   /* position: absolute; */
   float: right;
@@ -48,11 +68,13 @@ body {
 }
 #content {
   /* padding-top: 20px; */
-  margin-top: -20px;
+  /* margin-top: 200px; */
   position: relative;
   background-color: #e2e2e2;
   /* width: 100vw; */
   height: max-content;
+  /* top: 20px; */
+  top: 60px;
 }
 #day {
   z-index: 1000;
@@ -79,45 +101,33 @@ body {
   float: right;
   margin-right: 72px;
 }
-#mid {
-  position: absolute;
-  left: 600px;
-  text-decoration: none;
+
+#daytitle {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 70px;
+  margin-left: 50px;
+}
+#dayinfo {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 7px;
+  float: left;
+  margin-left: 50px;
 }
 
-.title {
-  float: left;
-  font-family: Arial, Helvetica, sans-serif;
-}
-#righttitle {
-  float: right;
-  margin-right: 72px;
-}
-#lefttitle {
-  margin-left: 72px;
-}
-#midtitle {
-  position: absolute;
-  left: 50%;
-  margin-left: -15px;
-}
-#line {
-  /* background-color: aqua; */
-  /* height: 100px; */
-  z-index: 10000000;
-  position: absolute;
-  top: -0px;
-  width: 1110px;
-  left: 50%;
-  margin-left: -555px;
-}
 .filmbox {
   position: relative;
   margin: 10px auto;
   background-color: #ffffff;
   width: 1110px;
   height: 280px;
-  top: 10px;
+  /* top: 10px; */
 }
 .filmphotoparent {
   float: right;
@@ -132,6 +142,8 @@ body {
   width: 360px;
   height: 280px;
   /* align-self: flex-end; */
+  vertical-align: bottom;
+  line-height: 25px;
 }
 p {
   text-align: right;
@@ -140,21 +152,29 @@ p {
   text-align: right;
   color: #eaeaea;
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
   top: 35vh;
   right: 13%;
+  vertical-align: bottom;
 }
 #button {
   background-color: #04007a;
   color: #eaeaea;
   width: 160px;
-  height: 50px;
-  border-radius: 25px;
+  height: 40px;
+  /* border-radius: 3px; */
   border: none;
   position: absolute;
-  top: 57vh;
+  top: 55vh;
   right: 13%;
+  outline: none;
+  font-size: 15px;
+  border-radius: 2px;
 }
+#button:hover {
+  background-color: #001489;
+}
+
 #bishtar {
   position: absolute;
   float: left;
@@ -164,22 +184,61 @@ p {
   display: none;
 }
 #footer {
+  
+  margin-top: 62px;
+  height: 144px;
   position: relative;
-  margin-top: 40px;
-  height: 86px;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: #172f33;
 }
-#instagramimage :hover {
+#twitter-black {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+#instagram-black {
+  position: absolute;
+  left: 50%;
+  margin-left: -12.25px;
+  bottom: 50px;
+}
+#telegram-black {
+  position: absolute;
+  left: 50%;
+  margin-left: 70px;
+  bottom: 50px;
+}
+#top {
+  position: absolute;
+  float: right;
+  right: 40px;
+  
+  bottom: 65px;
+
+  
+  height: 13px;
+}
+#logo-black {
+  position: absolute;
+  float: left;
+  left: 40px;
+ 
+  fill: #ffffff;
+  height: 30px;
+  bottom: 60px;
+}
+#instagramimage:hover {
   color: #04007a;
 }
 #dayfilmparent {
   position: relative;
   width: 1110px;
   height: 625px;
-  margin: 0px auto;
-  margin-top: 100vh;
-  top: 20px;
+  margin: 0 auto;
+  /* margin-top: 100vh; */
+  /* top: 10px;    */
   margin-bottom: 20px;
 }
 #dayfilm {
@@ -189,18 +248,26 @@ p {
 }
 #daycopyright {
   /* background-color: aquamarine; */
-  text-align: center;
+  text-align: right;
+  height: 50%;
+  width: 60%;
+  bottom: 10%;
   color: #ffffff;
-  position: absolute;
-  bottom: 0;
-  width: 1110px;
-
-  padding: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  line-height: 25px;
+}
+#dayabout {
+  color: #ffffff;
+  font-size: 25px;
+  margin-right: 50px;
+  margin-top: 220px;
+  text-align: right;
 }
 #q {
   text-align: center;
 }
-#title {
+.title {
   color: #ffffff;
   font-size: 30px;
   /* height: 80px;
@@ -213,7 +280,7 @@ p {
   padding: 20px 30px;
   /* letter-spacing: 1px; */
 }
-#director {
+.director {
   color: #ffffff;
   font-size: 15px;
   height: 40px;
@@ -226,7 +293,7 @@ p {
   padding-right: 30px;
   letter-spacing: 1px;
 }
-#donwloadparent {
+.donwloadparent {
   position: absolute;
   /* background-color: aquamarine; */
   z-index: 5;
@@ -234,40 +301,380 @@ p {
   margin-top: -23px;
   left: 50%;
   margin-left: -35px;
+  display: inline-block;
 }
 
-#twitter-black {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  margin-left: -100px;
-  /* top: 12px; */
-}
-#instagram-black {
-  position: absolute;
-  left: 50%;
-  margin-left: -12.25px;
-  top: 23px;
-}
-#telegram-black {
-  position: absolute;
-  left: 50%;
-  margin-left: 70px;
-  top: 25px;
-}
-#top {
-  float: right;
-  margin-right: 40px;
-  margin-top: 40px;
-  width: 20px;
-}
 a {
   color: black;
 }
-.filmtitle {
-  font-family: Arial, Helvetica, sans-serif;
+.title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
 }
+
 .director {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+#opacity {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 50%;
+  z-index: 99;
+  transition-duration: 0.3s;
+}
+#opacity:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition-duration: 0.3s;
+}
+
+#daymore {
+  font-size: 17px;
+  background-color: #04007a;
+  color: #ffffff;
+  height: 50px;
+  width: 150px;
+  /* background-color: aqua; */
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  margin-left: -75px;
+  margin-top: -20px;
+  padding-top: 13px;
+  z-index: 1000;
+  border-radius: 2px;
+}
+
+#daymore:hover {
+  background-color: #001489;
+}
+
+#daydownload {
+  position: absolute;
+  left: 50%;
+  margin-left: -34px;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 99;
+  transition-duration: 0.3s;
+}
+#space {
+  background-color: #e2e2e2;
+
+  width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 100vh;
+}
+.more {
+  position: absolute;
+  color: #ffffff;
+  background-color: #04007a;
+  height: 35px;
+  width: 85px;
+  float: left;
+  left: 10px;
+  bottom: 10px;
+  text-align: center;
+  padding-top: 6px;
+  border-radius: 2px;
+}
+.more:hover {
+  background-color: #001489;
+}
+#filmofday {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+  letter-spacing: 10px;
+}
+.more:hover {
+  background-color: #001489;
+}
+#filmofday {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+  letter-spacing: 10px;
+}
+@media only screen and (max-width: 1119px) {
+  #smallcontent {
+    display: inherit;
+  }
+  #header {
+    position: fixed;
+    background: url(../Images/PhantomThread768.jpg) center center;
+    background-size: cover;
+    /* height: 100vh; */
+    /* width: 100vw; */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+
+    /* position: relative; */
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0); */
+    /* margin-bottom: 50px; */
+    text-align: center;
+  }
+  #jumbotron {
+    text-align: center;
+    right: 50%;
+    margin-right: -90px;
+    line-height: 50px;
+  }
+  #button {
+    right: 50%;
+    margin-right: -80px;
+    top: 60vh;
+  }
+  #logo {
+    position: absolute;
+    /* position: absolute; */
+    float: left;
+    left: 25px;
+    margin-top: 12px;
+  }
+
+  #twitter {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 12px;
+  }
+  #instagram {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 10px;
+  }
+  #telegram {
+    position: absolute;
+    left: 50%;
+    margin-left: 45px;
+    top: 13px;
+  }
+  #logoimage {
+    height: 30px;
+    float: left;
+    left: 20px;
+    margin-top: 0px;
+  }
+
+  #profile {
+    /* position: absolute; */
+    float: right;
+    margin-top: 8px;
+    margin-right: 15px;
+  }
+  #content {
+    display: none;
+  }
+  #smallcontent {
+    position: relative;
+    background-color: #e2e2e2;
+    /* top: 10vh; */
+    height: max-content;
+    width: 100%;
+  }
+  #smalldayfilmparent {
+    position: relative;
+    background-color: #cc0c0c;
+    height: 500px;
+    width: 340px;
+    margin: 20px auto;
+    margin-bottom: 10px;
+  }
+  #smalldayfilm {
+    /* position: relative; */
+    width: 340px;
+    height: 500px;
+    margin: 0 auto;
+    /* margin-top: 100vh; */
+    /* top: 10px;    */
+    margin-bottom: 20px;
+  }
+  #smallopacity {
+    position: absolute;
+    /* right: 0%; */
+    /* bottom: 0; */
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 230px;
+    width: 340px;
+    z-index: 99;
+    transition-duration: 0.3s;
+    top: 250px;
+  }
+  #smallspace {
+    background-color: #e2e2e2;
+
+    width: 340px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 100vh;
+  }
+  #smallfilmofday {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    color: #ffffff;
+    left: 50%;
+    margin-left: -75px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    /* font-weight: 360; */
+  }
+  #smalldaytitle {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  #smalldayinfo {
+    color: #ffffff;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-align: left;
+    margin-top: 1px;
+    float: left;
+    margin-left: 30px;
+  }
+  #smalldayabout {
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-top: 30px;
+    text-align: right;
+  }
+  #smalldaycopyright {
+    text-align: right;
+    font-size: 11px;
+    height: 100px;
+    width: 280px;
+    bottom: 0%;
+    color: #ffffff;
+    margin-right: 30px;
+    margin-top: 10px;
+    line-height: 20px;
+    overflow: hidden;
+  }
+  #smalldaymore {
+    font-size: 17px;
+    background-color: #04007a;
+    color: #ffffff;
+    height: 40px;
+    width: 120px;
+    /* background-color: aqua; */
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -20px;
+    padding-top: 8px;
+    z-index: 1000;
+    border-radius: 2px;
+  }
+  #smalldaymore:hover {
+    background-color: #001489;
+  }
+  .smallfilmbox {
+    position: relative;
+    margin: 10px auto;
+    background-color: #ffffff;
+    width: 340px;
+    height: 500px;
+    /* top: 10px; */
+  }
+  .smallcopyright {
+    /* background-color: #cc0c0c; */
+    text-align: right;
+    font-size: 13px;
+    height: 230px;
+    width: 300px;
+
+    color: black;
+    margin-right: 30px;
+    margin-top: 10px;
+    line-height: 25px;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .smalltitle {
+    color: #ffffff;
+    font-size: 20px;
+    /* height: 80px;
+    width: 750px; */
+    text-align: left;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 30px;
+    font-weight: 500;
+    font-family: sans-serif;
+  }
+  .smalldirector {
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    height: 40px;
+    width: 750px;
+    text-align: left;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding-left: 30px;
+    /* letter-spacing: 1px; */
+  }
+  .smallmore {
+    position: absolute;
+    color: #ffffff;
+    background-color: #04007a;
+    height: 35px;
+    width: 100px;
+    float: left;
+    left: 10px;
+    bottom: 10px;
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 2px;
+  }
+  #smallfooter {
+    position: relative;
+    margin-top: 40px;
+    height: 150px;
+    bottom: 0;
+    background-color: #172f33;
+  }
+  #smalllogo-black {
+    position: absolute;
+    /* float: left; */
+    left: 50%;
+    margin-left: -35px;
+    /* margin-top: 40px; */
+    /* width: 20px; */
+    top: 30%;
+    fill: #ffffff;
+    width: 70px;
+  }
+  #moovr {
+    position: absolute;
+    /* background-color: #cc0c0c; */
+    color: #ffffff;
+    text-align: center;
+    left: 50%;
+    margin-left: -23px;
+    bottom: 18px;
+    letter-spacing: 2px;
+  }
 }

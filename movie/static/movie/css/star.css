@@ -16,6 +16,8 @@
       direction: rtl;
       text-align: center;
       position: relative;
+      left: -50px;
+      top: 7px;
   }
   
   .rating > label {
