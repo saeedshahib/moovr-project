@@ -1,8 +1,7 @@
 a {
-  color: #ffffff;
+  color: black;
 }
 a:hover {
-  color: #ffffff;
 }
 @media only screen and (min-width: 1024px) {
   #smallfooter {
@@ -40,7 +39,6 @@ a:hover {
   p,
   blockquote,
   pre,
-  a,
   abbr,
   acronym,
   address,
@@ -74,7 +72,6 @@ a:hover {
   li,
   fieldset,
   form,
-  label,
   legend,
   table,
   caption,
