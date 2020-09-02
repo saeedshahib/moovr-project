@@ -47,7 +47,11 @@
                         <img src="{% static 'movie/Images/speaker.svg' %}" id="speakericon">
                         <p>{{ movie.Language }}</p>
                     </div>
-    
+                    <div id="rating"><img src="{% static 'movie/Images/StarGold.svg' %}" style="width: 25px; float: left;">
+                        <span id="ratenumber">{{ movie.Rating }}</span>
+                        <span id="ratevolumenumber">{{ comments.count }}</span>
+                        <p id="ratevolume">rating</p>
+                    </div>
                 </div>
     
             </div>
