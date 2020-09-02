@@ -117,7 +117,13 @@
 
     </div>
     <div id="submitparent">
+        {% if user.is_authenticated %}
         <input type="submit" value="ارسال" id="submit">
+        {% else %}
+        <a href="#" data-toggle="modal" data-target="#exampleModalCenter">
+            <input type="button" value="ارسال" id="submit">
+        </a>
+        {% endif %}
         {% csrf_token %}
         <div id="spoil">
             <div class="rating">
