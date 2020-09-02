@@ -433,7 +433,7 @@ a {
   #button {
     right: 50%;
     margin-right: -80px;
-    top: 60vh;
+    top: 65vh;
   }
   #logo {
     position: absolute;
@@ -506,7 +506,7 @@ a {
     /* right: 0%; */
     /* bottom: 0; */
     background-color: rgba(0, 0, 0, 0.5);
-    height: 230px;
+    height: 250px;
     width: 340px;
     z-index: 99;
     transition-duration: 0.3s;
